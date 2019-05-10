@@ -37,7 +37,7 @@ getSamples i j nx ny camera world col a = do
   r2 <- randomRIO (0.0, 0.9999999999999999)
   let u = (fromIntegral i + r1) / (fromIntegral nx)
       v = (fromIntegral j + r2) / (fromIntegral ny)
-      r = getRay camera u v
+  r <- getRay camera u v
   c1 <- color r world 0
   return (col + c1)
 
@@ -47,7 +47,10 @@ main =
       ny = 100 :: Int
       ns = 100 :: Int
       header = ["P3", T.pack (show nx), T.pack (show ny), "255"]
-      camera = defaultCamera
+      lookfrom = (3,3,2)
+      lookat = (0,0,-1)
+      distToFocus = len (lookfrom - lookat)
+      camera = makeCamera lookfrom lookat (0,1,0) 20 (fromIntegral nx / fromIntegral ny) 2.0 distToFocus 
       world = [ Sphere (0, 0, -1) 0.5 (Lambertian (0.1, 0.2, 0.5))
               , Sphere (0, -100.5, -1) 100 (Lambertian (0.8, 0.8, 0.0))
               , Sphere (1, 0, -1) 0.5 (Metal (0.8, 0.6, 0.2) 1.0)
