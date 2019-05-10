@@ -19,7 +19,7 @@ dot (x1,y1,z1) (x2,y2,z2) = x1 * x2 + y1 * y2 + z1 * z2
 cross :: Vect3 -> Vect3 -> Vect3
 cross (x1,y1,z1) (x2,y2,z2) =
   let v1 = y1 * z2 - z1 * y2
-      v2 = (-1) * x1 * z2 - z1 * x2
+      v2 = (-1) * (x1 * z2 - z1 * x2)
       v3 = x1 * y2 - y1 * x2 in
       (v1,v2,v3)
 
