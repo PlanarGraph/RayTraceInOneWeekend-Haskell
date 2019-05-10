@@ -48,10 +48,11 @@ main =
       ns = 100 :: Int
       header = ["P3", T.pack (show nx), T.pack (show ny), "255"]
       camera = defaultCamera
-      world = [ Sphere (0, 0, -1) 0.5 (Lambertian (0.8, 0.3, 0.3))
+      world = [ Sphere (0, 0, -1) 0.5 (Lambertian (0.1, 0.2, 0.5))
               , Sphere (0, -100.5, -1) 100 (Lambertian (0.8, 0.8, 0.0))
               , Sphere (1, 0, -1) 0.5 (Metal (0.8, 0.6, 0.2) 1.0)
-              , Sphere (-1, 0, -1) 0.5 (Metal (0.8, 0.8, 0.8) 0.3) ] in do
+              , Sphere (-1, 0, -1) 0.5 (Dielectric 1.5) 
+              , Sphere (-1, 0, -1) (-0.45) (Dielectric 1.5)] in do
       forM_ header TIO.putStrLn
       forM_ [(j,i) | j <- [(ny-1),(ny-2)..0], i <- [0..(nx-1)]] $ \(j,i) -> do
          col <- foldM (getSamples i j nx ny camera world) (0, 0, 0) [0..(ns-1)]
