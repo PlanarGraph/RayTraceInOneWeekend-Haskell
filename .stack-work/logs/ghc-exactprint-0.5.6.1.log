@@ -1,0 +1,24 @@
+Configuring ghc-exactprint-0.5.6.1...
+Warning: The package has an extraneous version range for a dependency on an
+internal library: ghc-exactprint >=0.5.4. This version range includes the
+current package but isn't needed as the current package's library will always
+be used.
+clang: warning: argument unused during compilation: '-nopie' [-Wunused-command-line-argument]
+Preprocessing library for ghc-exactprint-0.5.6.1..
+Building library for ghc-exactprint-0.5.6.1..
+[ 1 of 13] Compiling Language.Haskell.GHC.ExactPrint.Types ( src/Language/Haskell/GHC/ExactPrint/Types.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Language/Haskell/GHC/ExactPrint/Types.o )
+[ 2 of 13] Compiling Language.Haskell.GHC.ExactPrint.Lookup ( src/Language/Haskell/GHC/ExactPrint/Lookup.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Language/Haskell/GHC/ExactPrint/Lookup.o )
+[ 3 of 13] Compiling Language.Haskell.GHC.ExactPrint.AnnotateTypes ( src/Language/Haskell/GHC/ExactPrint/AnnotateTypes.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Language/Haskell/GHC/ExactPrint/AnnotateTypes.o )
+[ 4 of 13] Compiling Language.Haskell.GHC.ExactPrint.Utils ( src/Language/Haskell/GHC/ExactPrint/Utils.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Language/Haskell/GHC/ExactPrint/Utils.o )
+[ 5 of 13] Compiling Language.Haskell.GHC.ExactPrint.Transform ( src/Language/Haskell/GHC/ExactPrint/Transform.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Language/Haskell/GHC/ExactPrint/Transform.o )
+[ 6 of 13] Compiling Language.Haskell.GHC.ExactPrint.Preprocess ( src/Language/Haskell/GHC/ExactPrint/Preprocess.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Language/Haskell/GHC/ExactPrint/Preprocess.o )
+[ 7 of 13] Compiling Language.Haskell.GHC.ExactPrint.Annotater ( src-ghc84/Language/Haskell/GHC/ExactPrint/Annotater.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Language/Haskell/GHC/ExactPrint/Annotater.o )
+[ 8 of 13] Compiling Language.Haskell.GHC.ExactPrint.Annotate ( src/Language/Haskell/GHC/ExactPrint/Annotate.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Language/Haskell/GHC/ExactPrint/Annotate.o )
+[ 9 of 13] Compiling Language.Haskell.GHC.ExactPrint.Print ( src/Language/Haskell/GHC/ExactPrint/Print.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Language/Haskell/GHC/ExactPrint/Print.o )
+[10 of 13] Compiling Language.Haskell.GHC.ExactPrint.Pretty ( src/Language/Haskell/GHC/ExactPrint/Pretty.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Language/Haskell/GHC/ExactPrint/Pretty.o )
+[11 of 13] Compiling Language.Haskell.GHC.ExactPrint.Delta ( src/Language/Haskell/GHC/ExactPrint/Delta.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Language/Haskell/GHC/ExactPrint/Delta.o )
+[12 of 13] Compiling Language.Haskell.GHC.ExactPrint.Parsers ( src/Language/Haskell/GHC/ExactPrint/Parsers.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Language/Haskell/GHC/ExactPrint/Parsers.o )
+[13 of 13] Compiling Language.Haskell.GHC.ExactPrint ( src/Language/Haskell/GHC/ExactPrint.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Language/Haskell/GHC/ExactPrint.o )
+ignoring (possibly broken) abi-depends field for packages
+Installing library in /Users/nolantiffney/.stack/snapshots/x86_64-osx/lts-12.10/8.4.3/lib/x86_64-osx-ghc-8.4.3/ghc-exactprint-0.5.6.1-HrKocbi5JgtD3776bTHdf7
+Registering library for ghc-exactprint-0.5.6.1..

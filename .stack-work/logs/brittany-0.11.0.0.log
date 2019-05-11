@@ -1,0 +1,59 @@
+Configuring brittany-0.11.0.0...
+clang: warning: argument unused during compilation: '-nopie' [-Wunused-command-line-argument]
+Preprocessing library for brittany-0.11.0.0..
+Building library for brittany-0.11.0.0..
+[ 1 of 30] Compiling Language.Haskell.Brittany.Internal.Prelude ( src/Language/Haskell/Brittany/Internal/Prelude.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Language/Haskell/Brittany/Internal/Prelude.o )
+[ 2 of 30] Compiling Language.Haskell.Brittany.Internal.PreludeUtils ( src/Language/Haskell/Brittany/Internal/PreludeUtils.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Language/Haskell/Brittany/Internal/PreludeUtils.o )
+[ 3 of 30] Compiling Language.Haskell.Brittany.Internal.Obfuscation ( src/Language/Haskell/Brittany/Internal/Obfuscation.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Language/Haskell/Brittany/Internal/Obfuscation.o )
+[ 4 of 30] Compiling Language.Haskell.Brittany.Internal.Config.Types ( src/Language/Haskell/Brittany/Internal/Config/Types.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Language/Haskell/Brittany/Internal/Config/Types.o )
+[ 5 of 30] Compiling Language.Haskell.Brittany.Internal.Config.Types.Instances ( src/Language/Haskell/Brittany/Internal/Config/Types/Instances.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Language/Haskell/Brittany/Internal/Config/Types/Instances.o )
+[ 6 of 30] Compiling Language.Haskell.Brittany.Internal.Types ( src/Language/Haskell/Brittany/Internal/Types.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Language/Haskell/Brittany/Internal/Types.o )
+[ 7 of 30] Compiling Language.Haskell.Brittany.Internal.Utils ( src/Language/Haskell/Brittany/Internal/Utils.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Language/Haskell/Brittany/Internal/Utils.o )
+[ 8 of 30] Compiling Language.Haskell.Brittany.Internal.Transformations.Par ( src/Language/Haskell/Brittany/Internal/Transformations/Par.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Language/Haskell/Brittany/Internal/Transformations/Par.o )
+[ 9 of 30] Compiling Language.Haskell.Brittany.Internal.Transformations.Indent ( src/Language/Haskell/Brittany/Internal/Transformations/Indent.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Language/Haskell/Brittany/Internal/Transformations/Indent.o )
+[10 of 30] Compiling Language.Haskell.Brittany.Internal.Transformations.Floating ( src/Language/Haskell/Brittany/Internal/Transformations/Floating.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Language/Haskell/Brittany/Internal/Transformations/Floating.o )
+[11 of 30] Compiling Language.Haskell.Brittany.Internal.Transformations.Columns ( src/Language/Haskell/Brittany/Internal/Transformations/Columns.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Language/Haskell/Brittany/Internal/Transformations/Columns.o )
+[12 of 30] Compiling Language.Haskell.Brittany.Internal.Transformations.Alt ( src/Language/Haskell/Brittany/Internal/Transformations/Alt.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Language/Haskell/Brittany/Internal/Transformations/Alt.o )
+[13 of 30] Compiling Language.Haskell.Brittany.Internal.ExactPrintUtils ( src/Language/Haskell/Brittany/Internal/ExactPrintUtils.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Language/Haskell/Brittany/Internal/ExactPrintUtils.o )
+[14 of 30] Compiling Language.Haskell.Brittany.Internal.LayouterBasics ( src/Language/Haskell/Brittany/Internal/LayouterBasics.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Language/Haskell/Brittany/Internal/LayouterBasics.o )
+[15 of 30] Compiling Language.Haskell.Brittany.Internal.Layouters.Type ( src/Language/Haskell/Brittany/Internal/Layouters/Type.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Language/Haskell/Brittany/Internal/Layouters/Type.o )
+[16 of 30] Compiling Language.Haskell.Brittany.Internal.Layouters.Stmt[boot] ( src/Language/Haskell/Brittany/Internal/Layouters/Stmt.hs-boot, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Language/Haskell/Brittany/Internal/Layouters/Stmt.o-boot )
+[17 of 30] Compiling Language.Haskell.Brittany.Internal.Layouters.IE ( src/Language/Haskell/Brittany/Internal/Layouters/IE.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Language/Haskell/Brittany/Internal/Layouters/IE.o )
+[18 of 30] Compiling Language.Haskell.Brittany.Internal.Layouters.Import ( src/Language/Haskell/Brittany/Internal/Layouters/Import.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Language/Haskell/Brittany/Internal/Layouters/Import.o )
+[19 of 30] Compiling Language.Haskell.Brittany.Internal.Layouters.Module ( src/Language/Haskell/Brittany/Internal/Layouters/Module.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Language/Haskell/Brittany/Internal/Layouters/Module.o )
+[20 of 30] Compiling Language.Haskell.Brittany.Internal.Layouters.Expr[boot] ( src/Language/Haskell/Brittany/Internal/Layouters/Expr.hs-boot, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Language/Haskell/Brittany/Internal/Layouters/Expr.o-boot )
+[21 of 30] Compiling Language.Haskell.Brittany.Internal.Layouters.Pattern ( src/Language/Haskell/Brittany/Internal/Layouters/Pattern.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Language/Haskell/Brittany/Internal/Layouters/Pattern.o )
+[22 of 30] Compiling Language.Haskell.Brittany.Internal.Layouters.Decl ( src/Language/Haskell/Brittany/Internal/Layouters/Decl.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Language/Haskell/Brittany/Internal/Layouters/Decl.o )
+[23 of 30] Compiling Language.Haskell.Brittany.Internal.Layouters.Stmt ( src/Language/Haskell/Brittany/Internal/Layouters/Stmt.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Language/Haskell/Brittany/Internal/Layouters/Stmt.o )
+[24 of 30] Compiling Language.Haskell.Brittany.Internal.Layouters.Expr ( src/Language/Haskell/Brittany/Internal/Layouters/Expr.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Language/Haskell/Brittany/Internal/Layouters/Expr.o )
+[25 of 30] Compiling Language.Haskell.Brittany.Internal.Config ( src/Language/Haskell/Brittany/Internal/Config.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Language/Haskell/Brittany/Internal/Config.o )
+
+[;1msrc/Language/Haskell/Brittany/Internal/Config.hs:238:24: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    In the use of ‘decodeEither’ (imported from Data.Yaml):
+    Deprecated: "Please use decodeEither' or decodeThrow, which provide more useful failures"[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m238 |[0m[0m       fileConf <- case [;1m[35mData.Yaml.decodeEither[0m[0m contents of
+[;1m[34m    |[0m[0m[;1m[35m                        ^^^^^^^^^^^^^^^^^^^^^^[0m[0m
+[0m[0m[0m[26 of 30] Compiling Language.Haskell.Brittany.Internal.BackendUtils ( src/Language/Haskell/Brittany/Internal/BackendUtils.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Language/Haskell/Brittany/Internal/BackendUtils.o )
+[27 of 30] Compiling Language.Haskell.Brittany.Internal.Backend ( src/Language/Haskell/Brittany/Internal/Backend.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Language/Haskell/Brittany/Internal/Backend.o )
+[28 of 30] Compiling Language.Haskell.Brittany.Internal ( src/Language/Haskell/Brittany/Internal.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Language/Haskell/Brittany/Internal.o )
+
+[;1msrc/Language/Haskell/Brittany/Internal.hs:120:11: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    In the use of ‘decode’ (imported from Data.Yaml):
+    Deprecated: "Please use decodeEither or decodeThrow, which provide information on how the decode failed"[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m120 |[0m[0m         . [;1m[35mData.Yaml.decode[0m[0m
+[;1m[34m    |[0m[0m[;1m[35m           ^^^^^^^^^^^^^^^^[0m[0m
+[0m[0m[0m[29 of 30] Compiling Language.Haskell.Brittany ( src/Language/Haskell/Brittany.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Language/Haskell/Brittany.o )
+[30 of 30] Compiling Paths_brittany   ( .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/autogen/Paths_brittany.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Paths_brittany.o )
+ignoring (possibly broken) abi-depends field for packages
+Preprocessing executable 'brittany' for brittany-0.11.0.0..
+Building executable 'brittany' for brittany-0.11.0.0..
+[1 of 2] Compiling Paths_brittany   ( .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/brittany/autogen/Paths_brittany.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/brittany/brittany-tmp/Paths_brittany.o )
+[2 of 2] Compiling Main             ( src-brittany/Main.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/brittany/brittany-tmp/Main.o )
+Linking .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/brittany/brittany ...
+clang: warning: argument unused during compilation: '-nopie' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-nopie' [-Wunused-command-line-argument]
+Installing library in /Users/nolantiffney/.stack/snapshots/x86_64-osx/lts-12.10/8.4.3/lib/x86_64-osx-ghc-8.4.3/brittany-0.11.0.0-3bmfIy2mRAI2lfIezfCp4p
+Installing executable brittany in /Users/nolantiffney/.stack/snapshots/x86_64-osx/lts-12.10/8.4.3/bin
+Registering library for brittany-0.11.0.0..

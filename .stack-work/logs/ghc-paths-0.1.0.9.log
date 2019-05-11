@@ -1,0 +1,21 @@
+[1 of 2] Compiling Main             ( /private/var/folders/bm/8chzg1_94dq9vt60yjnjk7bc0000gn/T/stack5058/ghc-paths-0.1.0.9/Setup.hs, /private/var/folders/bm/8chzg1_94dq9vt60yjnjk7bc0000gn/T/stack5058/ghc-paths-0.1.0.9/.stack-work/dist/x86_64-osx/Cabal-2.2.0.1/setup/Main.o )
+
+/private/var/folders/bm/8chzg1_94dq9vt60yjnjk7bc0000gn/T/stack5058/ghc-paths-0.1.0.9/Setup.hs:29:18: warning: [-Wdeprecations]
+    In the use of ‘rawSystemProgramStdoutConf’
+    (imported from Distribution.Simple.Program):
+    Deprecated: "use getDbProgramOutput instead. This symbol will be removed in Cabal-3.0 (est. Oct 2018)."
+   |
+29 |       libdir_ <- rawSystemProgramStdoutConf (fromFlag (configVerbosity flags))
+   |                  ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2 of 2] Compiling StackSetupShim   ( /Users/nolantiffney/.stack/setup-exe-src/setup-shim-mPHDZzAJ.hs, /private/var/folders/bm/8chzg1_94dq9vt60yjnjk7bc0000gn/T/stack5058/ghc-paths-0.1.0.9/.stack-work/dist/x86_64-osx/Cabal-2.2.0.1/setup/StackSetupShim.o )
+Linking /private/var/folders/bm/8chzg1_94dq9vt60yjnjk7bc0000gn/T/stack5058/ghc-paths-0.1.0.9/.stack-work/dist/x86_64-osx/Cabal-2.2.0.1/setup/setup ...
+clang: warning: argument unused during compilation: '-nopie' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-nopie' [-Wunused-command-line-argument]
+Configuring ghc-paths-0.1.0.9...
+clang: warning: argument unused during compilation: '-nopie' [-Wunused-command-line-argument]
+Preprocessing library for ghc-paths-0.1.0.9..
+Building library for ghc-paths-0.1.0.9..
+[1 of 1] Compiling GHC.Paths        ( GHC/Paths.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/GHC/Paths.o )
+ignoring (possibly broken) abi-depends field for packages
+Installing library in /Users/nolantiffney/.stack/snapshots/x86_64-osx/lts-12.10/8.4.3/lib/x86_64-osx-ghc-8.4.3/ghc-paths-0.1.0.9-BTJEJFO7ixU1hUjA8BfQ4h
+Registering library for ghc-paths-0.1.0.9..

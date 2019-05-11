@@ -1,0 +1,18 @@
+Configuring butcher-1.3.1.1...
+clang: warning: argument unused during compilation: '-nopie' [-Wunused-command-line-argument]
+Preprocessing library for butcher-1.3.1.1..
+Building library for butcher-1.3.1.1..
+[ 1 of 11] Compiling UI.Butcher.Monadic.Internal.Types ( src/UI/Butcher/Monadic/Internal/Types.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/UI/Butcher/Monadic/Internal/Types.o )
+[ 2 of 11] Compiling UI.Butcher.Monadic.Internal.Core ( src/UI/Butcher/Monadic/Internal/Core.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/UI/Butcher/Monadic/Internal/Core.o )
+[ 3 of 11] Compiling UI.Butcher.Monadic.Flag ( src/UI/Butcher/Monadic/Flag.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/UI/Butcher/Monadic/Flag.o )
+[ 4 of 11] Compiling UI.Butcher.Monadic.Param ( src/UI/Butcher/Monadic/Param.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/UI/Butcher/Monadic/Param.o )
+[ 5 of 11] Compiling UI.Butcher.Monadic.Command ( src/UI/Butcher/Monadic/Command.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/UI/Butcher/Monadic/Command.o )
+[ 6 of 11] Compiling UI.Butcher.Monadic.Pretty ( src/UI/Butcher/Monadic/Pretty.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/UI/Butcher/Monadic/Pretty.o )
+[ 7 of 11] Compiling UI.Butcher.Monadic.Interactive ( src/UI/Butcher/Monadic/Interactive.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/UI/Butcher/Monadic/Interactive.o )
+[ 8 of 11] Compiling UI.Butcher.Monadic.IO ( src/UI/Butcher/Monadic/IO.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/UI/Butcher/Monadic/IO.o )
+[ 9 of 11] Compiling UI.Butcher.Monadic.BuiltinCommands ( src/UI/Butcher/Monadic/BuiltinCommands.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/UI/Butcher/Monadic/BuiltinCommands.o )
+[10 of 11] Compiling UI.Butcher.Monadic.Types ( src/UI/Butcher/Monadic/Types.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/UI/Butcher/Monadic/Types.o )
+[11 of 11] Compiling UI.Butcher.Monadic ( src/UI/Butcher/Monadic.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/UI/Butcher/Monadic.o )
+ignoring (possibly broken) abi-depends field for packages
+Installing library in /Users/nolantiffney/.stack/snapshots/x86_64-osx/lts-12.10/8.4.3/lib/x86_64-osx-ghc-8.4.3/butcher-1.3.1.1-KkpI0ow5pABC0xEgYQjnlL
+Registering library for butcher-1.3.1.1..

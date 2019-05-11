@@ -1,0 +1,8 @@
+Configuring unsafe-0.0...
+clang: warning: argument unused during compilation: '-nopie' [-Wunused-command-line-argument]
+Preprocessing library for unsafe-0.0..
+Building library for unsafe-0.0..
+[1 of 1] Compiling System.Unsafe    ( src-new/System/Unsafe.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/System/Unsafe.o )
+ignoring (possibly broken) abi-depends field for packages
+Installing library in /Users/nolantiffney/.stack/snapshots/x86_64-osx/lts-12.10/8.4.3/lib/x86_64-osx-ghc-8.4.3/unsafe-0.0-GMfN8SJyoiBOcfugVwnQq
+Registering library for unsafe-0.0..

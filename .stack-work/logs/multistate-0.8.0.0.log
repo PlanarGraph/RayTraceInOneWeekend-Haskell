@@ -1,0 +1,29 @@
+Configuring multistate-0.8.0.0...
+clang: warning: argument unused during compilation: '-nopie' [-Wunused-command-line-argument]
+Preprocessing library for multistate-0.8.0.0..
+Building library for multistate-0.8.0.0..
+[ 1 of 22] Compiling Control.Monad.Trans.MultiGet.Class ( src/Control/Monad/Trans/MultiGet/Class.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Control/Monad/Trans/MultiGet/Class.o )
+[ 2 of 22] Compiling Control.Monad.Trans.MultiReader.Class ( src/Control/Monad/Trans/MultiReader/Class.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Control/Monad/Trans/MultiReader/Class.o )
+[ 3 of 22] Compiling Control.Monad.Trans.MultiState.Class ( src/Control/Monad/Trans/MultiState/Class.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Control/Monad/Trans/MultiState/Class.o )
+[ 4 of 22] Compiling Control.Monad.Trans.MultiWriter.Class ( src/Control/Monad/Trans/MultiWriter/Class.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Control/Monad/Trans/MultiWriter/Class.o )
+[ 5 of 22] Compiling Data.HList.HList ( src/Data/HList/HList.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Data/HList/HList.o )
+[ 6 of 22] Compiling Data.HList.ContainsType ( src/Data/HList/ContainsType.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Data/HList/ContainsType.o )
+[ 7 of 22] Compiling Control.Monad.Trans.MultiWriter.Strict ( src/Control/Monad/Trans/MultiWriter/Strict.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Control/Monad/Trans/MultiWriter/Strict.o )
+[ 8 of 22] Compiling Control.Monad.Trans.MultiWriter.Lazy ( src/Control/Monad/Trans/MultiWriter/Lazy.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Control/Monad/Trans/MultiWriter/Lazy.o )
+[ 9 of 22] Compiling Control.Monad.Trans.MultiWriter ( src/Control/Monad/Trans/MultiWriter.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Control/Monad/Trans/MultiWriter.o )
+[10 of 22] Compiling Control.Monad.Trans.MultiState.Strict ( src/Control/Monad/Trans/MultiState/Strict.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Control/Monad/Trans/MultiState/Strict.o )
+[11 of 22] Compiling Control.Monad.Trans.MultiState.Lazy ( src/Control/Monad/Trans/MultiState/Lazy.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Control/Monad/Trans/MultiState/Lazy.o )
+[12 of 22] Compiling Control.Monad.Trans.MultiState ( src/Control/Monad/Trans/MultiState.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Control/Monad/Trans/MultiState.o )
+[13 of 22] Compiling Control.Monad.Trans.MultiReader.Strict ( src/Control/Monad/Trans/MultiReader/Strict.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Control/Monad/Trans/MultiReader/Strict.o )
+[14 of 22] Compiling Control.Monad.Trans.MultiReader.Lazy ( src/Control/Monad/Trans/MultiReader/Lazy.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Control/Monad/Trans/MultiReader/Lazy.o )
+[15 of 22] Compiling Control.Monad.Trans.MultiReader ( src/Control/Monad/Trans/MultiReader.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Control/Monad/Trans/MultiReader.o )
+[16 of 22] Compiling Control.Monad.Trans.MultiRWS.Strict ( src/Control/Monad/Trans/MultiRWS/Strict.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Control/Monad/Trans/MultiRWS/Strict.o )
+[17 of 22] Compiling Control.Monad.Trans.MultiRWS.Lazy ( src/Control/Monad/Trans/MultiRWS/Lazy.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Control/Monad/Trans/MultiRWS/Lazy.o )
+[18 of 22] Compiling Control.Monad.Trans.MultiRWS ( src/Control/Monad/Trans/MultiRWS.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Control/Monad/Trans/MultiRWS.o )
+[19 of 22] Compiling Control.Monad.Trans.MultiGST.Common ( src/Control/Monad/Trans/MultiGST/Common.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Control/Monad/Trans/MultiGST/Common.o )
+[20 of 22] Compiling Control.Monad.Trans.MultiGST.Strict ( src/Control/Monad/Trans/MultiGST/Strict.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Control/Monad/Trans/MultiGST/Strict.o )
+[21 of 22] Compiling Control.Monad.Trans.MultiGST.Lazy ( src/Control/Monad/Trans/MultiGST/Lazy.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Control/Monad/Trans/MultiGST/Lazy.o )
+[22 of 22] Compiling Control.Monad.Trans.MultiGST ( src/Control/Monad/Trans/MultiGST.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Control/Monad/Trans/MultiGST.o )
+ignoring (possibly broken) abi-depends field for packages
+Installing library in /Users/nolantiffney/.stack/snapshots/x86_64-osx/lts-12.10/8.4.3/lib/x86_64-osx-ghc-8.4.3/multistate-0.8.0.0-KDCsO3j2kHO7HbEDXOZZB8
+Registering library for multistate-0.8.0.0..

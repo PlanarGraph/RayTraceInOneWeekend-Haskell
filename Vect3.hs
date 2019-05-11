@@ -24,7 +24,7 @@ cross (x1,y1,z1) (x2,y2,z2) =
       (v1,v2,v3)
 
 sqrLen :: Vect3 -> Double
-sqrLen (x, y, z) = (x^2 + y^2 + z^2)
+sqrLen (x, y, z) = x^2 + y^2 + z^2
 
 len :: Vect3 -> Double
 len = sqrt . sqrLen
@@ -34,7 +34,7 @@ unit v = let l = len v in
              mO (/l) v
 
 makeUnitVect :: Vect3 -> Vect3
-makeUnitVect x = let k = 1.0 / (len x) in
+makeUnitVect x = let k = 1.0 / len x in
                      mO (*k) x
 
 aO :: (Double -> Double -> Double) -> Vect3 -> Vect3 -> Vect3
@@ -44,13 +44,14 @@ mO :: (Double -> a) -> Vect3 -> (a,a,a)
 mO f (x1,y1,z1) =(f x1, f y1, f z1)
 
 instance Num Vect3 where
-    (+) x y = aO (+) x y
-    (-) x y = aO (-) x y
-    (*) x y = aO (*) x y
-    abs x = mO abs x
+    (+) = aO (+)
+    (-) = aO (-)
+    (*) = aO (*)
+    abs = mO abs
     fromInteger x = (0,0,0)
-    signum x = mO signum x
+    signum = mO signum
 
 instance Fractional Vect3 where
     fromRational x = (fromRational x,fromRational x,fromRational x)
-    (/) x y = aO (/) x y 
+    (/) = aO (/)
+

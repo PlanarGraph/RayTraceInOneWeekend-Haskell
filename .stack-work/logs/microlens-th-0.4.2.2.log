@@ -1,0 +1,8 @@
+Configuring microlens-th-0.4.2.2...
+clang: warning: argument unused during compilation: '-nopie' [-Wunused-command-line-argument]
+Preprocessing library for microlens-th-0.4.2.2..
+Building library for microlens-th-0.4.2.2..
+[1 of 1] Compiling Lens.Micro.TH    ( src/Lens/Micro/TH.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Lens/Micro/TH.o )
+ignoring (possibly broken) abi-depends field for packages
+Installing library in /Users/nolantiffney/.stack/snapshots/x86_64-osx/lts-12.10/8.4.3/lib/x86_64-osx-ghc-8.4.3/microlens-th-0.4.2.2-ImlWoSKcUE79Y5jZqrd5wj
+Registering library for microlens-th-0.4.2.2..

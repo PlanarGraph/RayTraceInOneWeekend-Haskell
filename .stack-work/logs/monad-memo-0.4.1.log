@@ -1,0 +1,93 @@
+Warning: monad-memo.cabal:58:4: Tabs used as indentation at 58:4
+Configuring monad-memo-0.4.1...
+clang: warning: argument unused during compilation: '-nopie' [-Wunused-command-line-argument]
+Preprocessing library for monad-memo-0.4.1..
+Building library for monad-memo-0.4.1..
+[ 1 of 16] Compiling Control.Monad.Memo.Class ( Control/Monad/Memo/Class.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Control/Monad/Memo/Class.o )
+
+[;1mControl/Monad/Memo/Class.hs:46:1: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    Module ‘Control.Monad.Trans.Error’ is deprecated:
+      Use Control.Monad.Trans.Except instead[0m[0m
+[;1m[34m   |[0m[0m
+[;1m[34m46 |[0m[0m [;1m[35mimport Control.Monad.Trans.Error[0m[0m
+[;1m[34m   |[0m[0m[;1m[35m ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m
+[0m[0m[0m
+[;1mControl/Monad/Memo/Class.hs:48:1: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    Module ‘Control.Monad.Trans.List’ is deprecated:
+      This transformer is invalid on most monads[0m[0m
+[;1m[34m   |[0m[0m
+[;1m[34m48 |[0m[0m [;1m[35mimport Control.Monad.Trans.List[0m[0m
+[;1m[34m   |[0m[0m[;1m[35m ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m
+[0m[0m[0m
+[;1mControl/Monad/Memo/Class.hs:164:49: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    In the use of type constructor or class ‘ListT’
+    (imported from Control.Monad.Trans.List):
+    Deprecated: "This transformer is invalid on most monads"[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m164 |[0m[0m instance (MonadCache k [v] m) => MonadMemo k v ([;1m[35mListT[0m[0m m) where
+[;1m[34m    |[0m[0m[;1m[35m                                                 ^^^^^[0m[0m
+[0m[0m[0m
+[;1mControl/Monad/Memo/Class.hs:165:14: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    In the use of data constructor ‘ListT’
+    (imported from Control.Monad.Trans.List):
+    Deprecated: "This transformer is invalid on most monads"[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m165 |[0m[0m     memo f = [;1m[35mListT[0m[0m . memol0 (runListT . f)
+[;1m[34m    |[0m[0m[;1m[35m              ^^^^^[0m[0m
+[0m[0m[0m
+[;1mControl/Monad/Memo/Class.hs:165:30: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    In the use of ‘runListT’ (imported from Control.Monad.Trans.List):
+    Deprecated: "This transformer is invalid on most monads"[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m165 |[0m[0m     memo f = ListT . memol0 ([;1m[35mrunListT[0m[0m . f)
+[;1m[34m    |[0m[0m[;1m[35m                              ^^^^^^^^[0m[0m
+[0m[0m[0m
+[;1mControl/Monad/Memo/Class.hs:167:11: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    In the use of type constructor or class ‘Error’
+    (imported from Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m167 |[0m[0m instance ([;1m[35mError[0m[0m e, MonadCache k  (Either e v) m) => MonadMemo k v (ErrorT e m) where
+[;1m[34m    |[0m[0m[;1m[35m           ^^^^^[0m[0m
+[0m[0m[0m
+[;1mControl/Monad/Memo/Class.hs:167:68: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    In the use of type constructor or class ‘ErrorT’
+    (imported from Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m167 |[0m[0m instance (Error e, MonadCache k  (Either e v) m) => MonadMemo k v ([;1m[35mErrorT[0m[0m e m) where
+[;1m[34m    |[0m[0m[;1m[35m                                                                    ^^^^^^[0m[0m
+[0m[0m[0m
+[;1mControl/Monad/Memo/Class.hs:168:14: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    In the use of data constructor ‘ErrorT’
+    (imported from Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m168 |[0m[0m     memo f = [;1m[35mErrorT[0m[0m . memol0 (runErrorT . f)
+[;1m[34m    |[0m[0m[;1m[35m              ^^^^^^[0m[0m
+[0m[0m[0m
+[;1mControl/Monad/Memo/Class.hs:168:31: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    In the use of ‘runErrorT’
+    (imported from Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m168 |[0m[0m     memo f = ErrorT . memol0 ([;1m[35mrunErrorT[0m[0m . f)
+[;1m[34m    |[0m[0m[;1m[35m                               ^^^^^^^^^[0m[0m
+[0m[0m[0m[ 2 of 16] Compiling Control.Monad.Trans.Memo.ReaderCache ( Control/Monad/Trans/Memo/ReaderCache.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Control/Monad/Trans/Memo/ReaderCache.o )
+[ 3 of 16] Compiling Control.Monad.Trans.Memo.StateCache ( Control/Monad/Trans/Memo/StateCache.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Control/Monad/Trans/Memo/StateCache.o )
+[ 4 of 16] Compiling Data.MapLike     ( Data/MapLike.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Data/MapLike.o )
+[ 5 of 16] Compiling Control.Monad.Trans.Memo.State ( Control/Monad/Trans/Memo/State.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Control/Monad/Trans/Memo/State.o )
+[ 6 of 16] Compiling Data.MapLike.Instances ( Data/MapLike/Instances.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Data/MapLike/Instances.o )
+[ 7 of 16] Compiling Control.Monad.Trans.Memo.Map ( Control/Monad/Trans/Memo/Map.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Control/Monad/Trans/Memo/Map.o )
+[ 8 of 16] Compiling Data.MaybeLike   ( Data/MaybeLike.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Data/MaybeLike.o )
+[ 9 of 16] Compiling Control.Monad.Memo.Vector.Unsafe ( Control/Monad/Memo/Vector/Unsafe.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Control/Monad/Memo/Vector/Unsafe.o )
+[10 of 16] Compiling Control.Monad.Memo.Vector.Expandable ( Control/Monad/Memo/Vector/Expandable.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Control/Monad/Memo/Vector/Expandable.o )
+[11 of 16] Compiling Control.Monad.Memo.Vector ( Control/Monad/Memo/Vector.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Control/Monad/Memo/Vector.o )
+[12 of 16] Compiling Control.Monad.Memo.Vector.Instances ( Control/Monad/Memo/Vector/Instances.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Control/Monad/Memo/Vector/Instances.o )
+[13 of 16] Compiling Control.Monad.Memo.Array ( Control/Monad/Memo/Array.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Control/Monad/Memo/Array.o )
+[14 of 16] Compiling Control.Monad.Memo.Array.Instances ( Control/Monad/Memo/Array/Instances.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Control/Monad/Memo/Array/Instances.o )
+[15 of 16] Compiling Data.MaybeLike.Instances ( Data/MaybeLike/Instances.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Data/MaybeLike/Instances.o )
+[16 of 16] Compiling Control.Monad.Memo ( Control/Monad/Memo.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Control/Monad/Memo.o )
+ignoring (possibly broken) abi-depends field for packages
+Installing library in /Users/nolantiffney/.stack/snapshots/x86_64-osx/lts-12.10/8.4.3/lib/x86_64-osx-ghc-8.4.3/monad-memo-0.4.1-6FjOaPEmpZxCZH7q1r2bzD
+Registering library for monad-memo-0.4.1..
