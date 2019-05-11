@@ -1,18 +1,18 @@
 module Camera where
 
-import Vect3
-import Ray
-import System.Random
+import           Ray
+import           System.Random
+import           Vect3
 
 data Camera = MkCamera {
     lowerLeftCorner :: Vect3,
-    horizontal :: Vect3,
-    vertical :: Vect3,
-    origin :: Vect3,
-    u :: Vect3,
-    v :: Vect3,
-    w :: Vect3,
-    lensRadius :: Double
+    horizontal      :: Vect3,
+    vertical        :: Vect3,
+    origin          :: Vect3,
+    u               :: Vect3,
+    v               :: Vect3,
+    w               :: Vect3,
+    lensRadius      :: Double
 }
 
 randomInUnitDisk :: IO Vect3
@@ -42,5 +42,5 @@ getRay :: Camera -> Double -> Double -> IO Ray
 getRay (MkCamera llc ho ve or u v w lr) s t = do
     rnd <- randomInUnitDisk
     let rd = mO (*lr) rnd
-        offset = mO (*(getX rd)) u + mO (*(getY rd)) v in
+        offset = mO (* getX rd) u + mO (* getY rd) v in
         return $ MkRay (or + offset) (llc + mO (*s) ho + mO (*t) ve - or - offset)

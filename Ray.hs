@@ -1,9 +1,9 @@
 module Ray where
 
-import Vect3
+import           Vect3
 
 data Ray = MkRay {
-    origin :: Vect3,
+    origin    :: Vect3,
     direction :: Vect3
 }
 
