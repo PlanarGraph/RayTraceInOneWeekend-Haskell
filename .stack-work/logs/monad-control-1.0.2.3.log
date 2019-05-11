@@ -1,8 +1,0 @@
-Configuring monad-control-1.0.2.3...
-clang: warning: argument unused during compilation: '-nopie' [-Wunused-command-line-argument]
-Preprocessing library for monad-control-1.0.2.3..
-Building library for monad-control-1.0.2.3..
-[1 of 1] Compiling Control.Monad.Trans.Control ( Control/Monad/Trans/Control.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/Control/Monad/Trans/Control.o )
-ignoring (possibly broken) abi-depends field for packages
-Installing library in /Users/nolantiffney/.stack/snapshots/x86_64-osx/lts-12.10/8.4.3/lib/x86_64-osx-ghc-8.4.3/monad-control-1.0.2.3-4XIDYdMxk1zGOQiv9slVQY
-Registering library for monad-control-1.0.2.3..

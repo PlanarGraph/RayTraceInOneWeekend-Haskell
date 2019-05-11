@@ -1,8 +1,0 @@
-Configuring data-tree-print-0.1.0.1...
-clang: warning: argument unused during compilation: '-nopie' [-Wunused-command-line-argument]
-Preprocessing library for data-tree-print-0.1.0.1..
-Building library for data-tree-print-0.1.0.1..
-[1 of 1] Compiling DataTreePrint    ( src/DataTreePrint.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/DataTreePrint.o )
-ignoring (possibly broken) abi-depends field for packages
-Installing library in /Users/nolantiffney/.stack/snapshots/x86_64-osx/lts-12.10/8.4.3/lib/x86_64-osx-ghc-8.4.3/data-tree-print-0.1.0.1-Iy90sSl9njzE7Ctu5XadG6
-Registering library for data-tree-print-0.1.0.1..
