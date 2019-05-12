@@ -1,0 +1,30 @@
+Configuring ghc-events-0.8.0.2...
+clang: warning: argument unused during compilation: '-nopie' [-Wunused-command-line-argument]
+Preprocessing library for ghc-events-0.8.0.2..
+Building library for ghc-events-0.8.0.2..
+[ 1 of 10] Compiling GHC.RTS.EventTypes ( src/GHC/RTS/EventTypes.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/GHC/RTS/EventTypes.o )
+[ 2 of 10] Compiling GHC.RTS.EventParserUtils ( src/GHC/RTS/EventParserUtils.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/GHC/RTS/EventParserUtils.o )
+[ 3 of 10] Compiling GHC.RTS.Events.Binary ( src/GHC/RTS/Events/Binary.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/GHC/RTS/Events/Binary.o )
+[ 4 of 10] Compiling GHC.RTS.Events.Incremental ( src/GHC/RTS/Events/Incremental.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/GHC/RTS/Events/Incremental.o )
+[ 5 of 10] Compiling GHC.RTS.Events   ( src/GHC/RTS/Events.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/GHC/RTS/Events.o )
+[ 6 of 10] Compiling GHC.RTS.Events.Analysis ( src/GHC/RTS/Events/Analysis.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/GHC/RTS/Events/Analysis.o )
+[ 7 of 10] Compiling GHC.RTS.Events.Analysis.Thread ( src/GHC/RTS/Events/Analysis/Thread.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/GHC/RTS/Events/Analysis/Thread.o )
+[ 8 of 10] Compiling GHC.RTS.Events.Analysis.SparkThread ( src/GHC/RTS/Events/Analysis/SparkThread.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/GHC/RTS/Events/Analysis/SparkThread.o )
+
+[;1msrc/GHC/RTS/Events/Analysis/SparkThread.hs:94:5: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wunused-local-binds[0m[0m[;1m][0m[0m[;1m
+    Defined but not used: ‘stopThread’[0m[0m
+[;1m[34m   |[0m[0m
+[;1m[34m94 |[0m[0m     [;1m[35mstopThread[0m[0m threadId = Just (M.filter (/= threadId) m, S.delete threadId s)
+[;1m[34m   |[0m[0m[;1m[35m     ^^^^^^^^^^[0m[0m
+[0m[0m[0m[ 9 of 10] Compiling GHC.RTS.Events.Analysis.Capability ( src/GHC/RTS/Events/Analysis/Capability.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/GHC/RTS/Events/Analysis/Capability.o )
+[10 of 10] Compiling GHC.RTS.Events.Merge ( src/GHC/RTS/Events/Merge.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/GHC/RTS/Events/Merge.o )
+ignoring (possibly broken) abi-depends field for packages
+Preprocessing executable 'ghc-events' for ghc-events-0.8.0.2..
+Building executable 'ghc-events' for ghc-events-0.8.0.2..
+[1 of 1] Compiling Main             ( GhcEvents.hs, .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/ghc-events/ghc-events-tmp/Main.o )
+Linking .stack-work/dist/x86_64-osx/Cabal-2.2.0.1/build/ghc-events/ghc-events ...
+clang: warning: argument unused during compilation: '-nopie' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-nopie' [-Wunused-command-line-argument]
+Installing library in /Users/nolantiffney/haskell/raytrace/.stack-work/install/x86_64-osx/lts-12.10/8.4.3/lib/x86_64-osx-ghc-8.4.3/ghc-events-0.8.0.2-2vpZ43GcJUu4N5MGHzqEWT
+Installing executable ghc-events in /Users/nolantiffney/haskell/raytrace/.stack-work/install/x86_64-osx/lts-12.10/8.4.3/bin
+Registering library for ghc-events-0.8.0.2..

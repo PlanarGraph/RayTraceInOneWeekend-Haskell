@@ -12,6 +12,10 @@ import           Ray
 import           System.Random
 import           Vect3
 import           Control.Parallel.Strategies
+import           Control.Monad.Par (spawn)
+import           Control.Monad.Par.IO
+import           Control.Monad.Trans
+import           Control.Concurrent.Async
 
 data Scene = MkScene {
     header :: [BC.ByteString],
@@ -46,6 +50,8 @@ color r@(MkRay origin direction) world depth =
               return $ attenuation * col
          else return (0,0,0)
 
+printHeader :: Scene -> BC.ByteString
+printHeader (MkScene header _ _ _ _ _) = BC.unlines header
 
 printVect :: Vect3 -> BC.ByteString
 printVect v =
@@ -54,30 +60,29 @@ printVect v =
 
 
 getSamples :: Int -> Int -> Int -> Int -> Camera -> HitableList ->
-              Vect3 -> Int ->  IO Vect3
-getSamples i j nx ny camera world col a = do
-  r1 <- randomRIO (0.0, 0.9999999999999999)
-  r2 <- randomRIO (0.0, 0.9999999999999999)
+              Vect3 -> Int -> IO Vect3
+getSamples i j nx ny camera world col a= do
+  r1 <- liftIO $ randomRIO (0.0, 0.9999999999999999)
+  r2 <- liftIO $ randomRIO (0.0, 0.9999999999999999)
   let u = (fromIntegral i + r1) / fromIntegral nx
       v = (fromIntegral j + r2) / fromIntegral ny
   r <- getRay camera u v
   c1 <- color r world 0
   return (col + c1)
 
-
-renderScene :: ReaderT Scene IO [BC.ByteString]
-renderScene = do
+renderCol :: (Int, Int) -> ReaderT Scene IO Vect3
+renderCol (j, i) = do
   (MkScene header nx ny ns camera world) <- ask
-  let ni = ns `div` 2
-  -- liftIO $ forM_ header BC.putStrLn
-  sol <- liftIO $ forM [(j, i) | j <- [(ny-1),(ny-2)..0], i <- [0..(nx-1)]] $ \(j,i) -> do
-    col <- foldM (getSamples i j nx ny camera world) (0, 0, 0) [0..(ns-1)]
-    --col <- runEval $ do
-      --col1 <- rpar $ foldM (getSamples i j nx ny camera world) (0, 0, 0) [0..(ni - 1)]
-      --col2 <- rpar $ foldM (getSamples i j nx ny camera world) (0, 0, 0) [ni..(ns-1)]
-      --rseq col1
-      --rseq col2
-      --return ((+) <$> col1 <*> col2)
-    return $ printVect $ mO (\x -> (*) 255.99 $ sqrt $ x / fromIntegral ns) col
-    --liftIO $ BC.putStrLn $ printVect $ mO (\x -> (*) 255.99 $ sqrt $ x / fromIntegral ns) col
-  return $ header <> sol
+
+  col <- liftIO $ foldM (getSamples i j nx ny camera world) (0, 0, 0) [0..(ns-1)]
+  --col <- liftIO $ replicateConcurrently ns (getSamples i j nx ny camera world)
+  return $ mO (\x -> (*) 255.99 $ sqrt $ x / fromIntegral ns) col
+
+renderScene :: StdGen -> ReaderT Scene IO [Vect3]
+renderScene g = do
+  liftIO $ setStdGen g
+  scene@(MkScene header nx ny ns camera world) <- ask
+  let ni = ny `div` 2
+      genCols x = runReaderT (renderCol x) scene
+  pic <- liftIO $ forM [(j, i) | j <- [(ny-1),(ny-2)..0], i <- [0..(nx-1)]] genCols
+  return pic
