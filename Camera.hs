@@ -3,6 +3,8 @@ module Camera where
 import           Ray
 import           System.Random
 import           Vect3
+import           Control.Monad.IO.Class
+import           Control.Monad.Par.IO
 
 data Camera = MkCamera {
     lowerLeftCorner :: Vect3,
@@ -17,8 +19,8 @@ data Camera = MkCamera {
 
 randomInUnitDisk :: IO Vect3
 randomInUnitDisk = do
-  x <- randomRIO (0.0, 0.9999999999999999)
-  y <- randomRIO (0.0, 0.9999999999999999)
+  x <- liftIO $ randomRIO (0.0, 0.9999999999999999)
+  y <- liftIO $ randomRIO (0.0, 0.9999999999999999)
   let p = mO (*2) (x,y,0) - (1,1,0)
   if dot p p >= 1.0
      then randomInUnitDisk

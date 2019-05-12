@@ -1,22 +1,32 @@
 module Main where
 
 import           Control.Monad.Trans.Reader
+import           Control.Monad
 import           Hitable
 import           Scene
+import           Vect3
 import           HitableList
 import qualified Data.ByteString.Char8 as BC
-import Control.Monad
+import           Control.Parallel.Strategies
+import           Control.Concurrent.Async
+import           Control.Monad.Par.IO
+import           System.Random
+
+getStdGens :: StdGen -> Int -> [StdGen]
+getStdGens _ 0 = []
+getStdGens gen n =
+  let (g1,g2) = split gen in
+  g1 : getStdGens g2 (n-1)
 
 main :: IO ()
 main = do
   wld <- randomWorld
-  --let wld =
-  --      [ Sphere (0 , 0     , -1) 0.5     (Lambertian (0.1, 0.2, 0.5))
-  --      , Sphere (0 , -100.5, -1) 100     (Lambertian (0.8, 0.8, 0.0))
-  --      , Sphere (1 , 0     , -1) 0.5     (Metal (0.8, 0.6, 0.2) 1.0)
-  --      , Sphere (-1, 0     , -1) 0.5     (Dielectric 1.5)
-  --      , Sphere (-1, 0     , -1) (-0.45) (Dielectric 1.5)
-  --      ]
-  let scene = makeScene 1200 800 10 (13, 2, 3) (0, 0, 0) 20 0.1 wld  
-  x <- runReaderT renderScene scene
-  forM_ x BC.putStrLn
+  cg <- getStdGen
+  let stdGens = getStdGens cg 1
+      scene = makeScene 400 200 400 (13, 2, 3) (0, 0, 0) 20 0.1 wld  
+  pics <- mapConcurrently (\x -> runReaderT (renderScene x) scene) stdGens
+  let lp = fromIntegral $ length pics 
+      pic = map (printVect . mO (/lp)) $ foldl1 (zipWith (+)) pics
+  BC.writeFile "out.ppm" (BC.unlines $ header scene <> pic)
+  --BC.putStrLn . printHeader $ scene
+  --forM_ pic (BC.putStrLn . printVect)

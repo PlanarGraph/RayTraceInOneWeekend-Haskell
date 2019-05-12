@@ -4,6 +4,8 @@ module Hitable where
 import           Ray
 import           System.Random
 import           Vect3
+import           Control.Monad.IO.Class
+import           Control.Monad.Par.IO
 
 data HitRecord = MkHR {
     t      :: Double,
@@ -48,9 +50,9 @@ hit s@(Sphere center radius material) r@(MkRay origin direction) tMin tMax =
 
 randomInUnitSphere :: IO Vect3
 randomInUnitSphere = do
-  x <- randomRIO (0.0, 0.9999999999999999)
-  y <- randomRIO (0.0, 0.9999999999999999)
-  z <- randomRIO (0.0, 0.9999999999999999)
+  x <- liftIO $ randomRIO (0.0, 0.9999999999999999)
+  y <- liftIO $ randomRIO (0.0, 0.9999999999999999)
+  z <- liftIO $ randomRIO (0.0, 0.9999999999999999)
   let p = mO (*2) (x,y,z) - (1,1,1)
   if sqrLen p >= 1.0
      then randomInUnitSphere
@@ -96,7 +98,7 @@ scatter (MkHR t p normal (Dielectric refIdx)) (MkRay origin direction) =
       case refract direction outNorm nt of
            Nothing -> return ((1.0, 1.0, 1.0), MkRay p reflected, True)
            Just refracted -> do
-             rnd <- randomRIO (0.0, 0.9999999999999999)
+             rnd <- liftIO $ randomRIO (0.0, 0.9999999999999999)
              if rnd < schlick cosine refIdx
                 then return ((1.0, 1.0, 1.0), MkRay p reflected, True)
                 else return ((1.0, 1.0, 1.0), MkRay p refracted, True)
