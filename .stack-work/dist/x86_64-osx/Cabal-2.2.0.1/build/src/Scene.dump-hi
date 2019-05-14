@@ -1,0 +1,480 @@
+
+==================== FINAL INTERFACE ====================
+2019-05-14 01:26:06.334379 UTC
+
+interface raytrace-0.1.0.0-DA41VseRCpx3rR4fL5DUdq:Scene 8043
+  interface hash: b1294dcb59fac30884251dc2af2f99c8
+  ABI hash: 7a3b7d5cac19c3828f16ca22da571db0
+  export-list hash: 625a0276cbd909566e97c8927588997b
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: be022818a1059e1d97974599f911b559
+  opt_hash: 14e536840aca4e889cad654e6f9b79c1
+  hpc_hash: 93b885adfe0da089cdf634904fd59f71
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Scene.color
+  Scene.gSG
+  Scene.getSamples
+  Scene.makeScene
+  Scene.printHeader
+  Scene.printVect
+  Scene.renderCol
+  Scene.renderScene
+  Scene.Scene{Scene.MkScene camera header ns nx ny world}
+module dependencies: Camera Hitable HitableList Ray Vect3
+package dependencies: array-0.5.2.0 base-4.11.1.0
+                      bytestring-0.10.8.2 containers-0.5.11.0 deepseq-1.4.3.0
+                      ghc-prim-0.5.2.0 integer-gmp-1.0.2.0 parallel-3.2.2.0 random-1.1
+                      time-1.8.0.2 transformers-0.5.5.0
+orphans: time-1.8.0.2:Data.Time.Format.Parse
+         time-1.8.0.2:Data.Time.LocalTime.Internal.ZonedTime
+         time-1.8.0.2:Data.Time.LocalTime.Internal.LocalTime
+         time-1.8.0.2:Data.Time.Calendar.Gregorian
+         raytrace-0.1.0.0-DA41VseRCpx3rR4fL5DUdq:Vect3
+         base-4.11.1.0:GHC.Float base-4.11.1.0:GHC.Base
+family instance modules: base-4.11.1.0:Control.Applicative
+                         base-4.11.1.0:Data.Complex base-4.11.1.0:Data.Functor.Compose
+                         base-4.11.1.0:Data.Functor.Const
+                         base-4.11.1.0:Data.Functor.Identity
+                         base-4.11.1.0:Data.Functor.Product base-4.11.1.0:Data.Functor.Sum
+                         base-4.11.1.0:Data.Monoid base-4.11.1.0:Data.Semigroup
+                         base-4.11.1.0:Data.Semigroup.Internal base-4.11.1.0:Data.Version
+                         base-4.11.1.0:Data.Void base-4.11.1.0:GHC.Exts
+                         base-4.11.1.0:GHC.Generics base-4.11.1.0:GHC.IO.Exception
+                         containers-0.5.11.0:Data.Map.Internal
+                         containers-0.5.11.0:Data.Set.Internal
+import  -/  base-4.11.1.0:Control.Monad c5f960c67d822497578bffbd3e4c01cf
+import  -/  base-4.11.1.0:Control.Monad.IO.Class 96109c36cb3c919872278540487fa39e
+import  -/  base-4.11.1.0:Data.Foldable 8ed35c38958063956af33c935ea03444
+import  -/  base-4.11.1.0:Data.Traversable 7ad4edb9184ea1ae8e73f6b94f115c8c
+import  -/  base-4.11.1.0:Data.Tuple 3af66f3ac61ed95ba8a3a3f68ebc5003
+import  -/  base-4.11.1.0:GHC.Base 604111500e81281298777e721c75643b
+import  -/  base-4.11.1.0:GHC.Enum 8824828888f5a89ecc9e7c73f05f3151
+import  -/  base-4.11.1.0:GHC.Float 99c69d365bb2607725a22530ce1ca4b4
+import  -/  base-4.11.1.0:GHC.List 1e4357702d8d00cded0703bd293e50e8
+import  -/  base-4.11.1.0:GHC.Num 8e54b26dce4495382dc4b50cf36ab754
+import  -/  base-4.11.1.0:GHC.Real b4beb0389ba1ad5d9640aae67848c5d3
+import  -/  base-4.11.1.0:GHC.Show 73be67392447c974f19c3befd83c46c0
+import  -/  base-4.11.1.0:Prelude 0750c25585e2b797cd78291d423d39dd
+import  -/  bytestring-0.10.8.2:Data.ByteString.Char8 801fee6d15f5471654463d991475364a
+import  -/  bytestring-0.10.8.2:Data.ByteString.Internal dc7d0c96ef45c703ca21607112260299
+import  -/  ghc-prim-0.5.2.0:GHC.Classes 122abfcd7450c6c11602933c9ca5f80d
+import  -/  ghc-prim-0.5.2.0:GHC.Types d9b3023de7feae4a5308d643da5543f7
+import  -/  parallel-3.2.2.0:Control.Parallel.Strategies c19ac72b87b2caa0e50c6aefc8971ce2
+import  -/  random-1.1:System.Random 6bcaf7d3cfad85f40dc48ba73a0e29c2
+import  -/  Camera 598ab171be5b742ea65313161d4dd72a
+  exports: ae737459023c9c74e3b8953e62562fd7
+  Camera 26562e4bd4122373a5ca22dd41cf7161
+  getRay 4da15452293b625d09af9452ac4e7473
+  makeCamera 4af68b5ccf725c6e783898a11745464b
+import  -/  Hitable c7faafffe95f219dfdf22da3435d131a
+  exports: fb838290faf58a54f3aa26dd83e8d866
+  scatter 937bc233ba3388a1b80279073a943700
+import  -/  HitableList de0d29a9f96f0db0570948e0ce280a91
+  exports: 7dc09589ad72d3f0c4b8aae01d432037
+  HitableList f4b1d947f444f8f6d39089dd40f8e9ed
+  hitL fcb0ad4031bece1be78ca125615a1a45
+import  -/  Ray 5e1d3ed2d22855e66b9e329bc7210ca0
+  exports: ea48f532ce0ebdf3df85a4de6319a7e4
+  MkRay 1b2cc71d1f08cf95ce539aa06859b51c
+  Ray dab2c393db8bd018a1ce5ed25bcbe8ec
+import  -/  Vect3 b9cdaf8bcb18f0a8745a2802b5b95b88
+  exports: 3b85256eda7109159aaf48e1a3fb813a
+  Vect3 0677165c36feaa9e8188c53ca2d24618
+  getY 3f1caaddb38ec078910f38f50a69ed1f
+  len 10c30e823bf4e59daa55035e0713ec77
+  mO ccc736fab26538d940b033676733ae0c
+  unit 024b2f2ba5cc2f6d9d141284b7f5ce4e
+import  -/  transformers-0.5.5.0:Control.Monad.Trans.Reader 42962052353a5a0f766912058b765b5d
+cbd394c1a1b73dadf5ac041d512e6b01
+  $tc'MkScene :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   4660533527327519949##
+                   15992675752359968459##
+                   Scene.$trModule
+                   Scene.$tc'MkScene2
+                   0#
+                   Scene.$tc'MkScene1) -}
+0249bd23b798d08ea96db1ef84a6ec1c
+  $tc'MkScene1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+8c37109745a9869042f6dac1e5e4110b
+  $tc'MkScene2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Scene.$tc'MkScene3) -}
+36390b61776e082c7be442d3dc91728e
+  $tc'MkScene3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'MkScene"#) -}
+257388d25ffd03f7c0b487f16e793e91
+  $tcScene :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   6447911446883044848##
+                   6200163300860367461##
+                   Scene.$trModule
+                   Scene.$trModule1
+                   0#
+                   GHC.Types.krep$*) -}
+176e5399f2054af4e73ec815ad65885d
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Scene.$trModule3 Scene.$trModule1) -}
+8dd7ded3bfeec9892f9c1aa635f8de0f
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Scene.$trModule2) -}
+43705f0423de187bbe77dc09b111c30c
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Scene"#) -}
+b72a777de864b8500cb79b57bb03c18d
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Scene.$trModule4) -}
+eb0519a2c2f5daa437dbb4ed8f093795
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("raytrace-0.1.0.0-DA41VseRCpx3rR4fL5DUdq"#) -}
+8aae0cf6b840e1e4719b78ee8b78ed08
+  $wcolor ::
+    Vect3.Vect3
+    -> Vect3.Vect3
+    -> HitableList.HitableList
+    -> GHC.Types.Int
+    -> System.Random.StdGen
+    -> (# GHC.Types.Double, GHC.Types.Double, GHC.Types.Double #)
+  {- Arity: 5,
+     Strictness: <L,U(U(U),U(U),U(U))><L,U(U(U),U(U),U(U))><S,U><L,1*U(U)><L,U(U,U)>,
+     Inline: [0] -}
+69d19f630a197f7c739cc1f8dc95f390
+  $wgSG ::
+    System.Random.StdGen -> GHC.Prim.Int# -> [System.Random.StdGen]
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,1*U(U,U)><S,1*U>,
+     Inline: [0] -}
+6eae5e120c7502c18af390c61f9f5e97
+  $wgetSamples ::
+    GHC.Types.Int
+    -> GHC.Types.Int
+    -> GHC.Types.Int
+    -> GHC.Types.Int
+    -> GHC.Types.Int
+    -> Camera.Camera
+    -> HitableList.HitableList
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, Vect3.Vect3 #)
+  {- Arity: 8,
+     Strictness: <L,U(U)><L,U(U)><L,U(U)><L,U(U)><L,U(U)><L,U(U(U(U),U(U),U(U)),U(U(U),U(U),U(U)),U(U(U),U(U),U(U)),U(U(U),U(U),U(U)),U(U(U),U(U),U(U)),U(U(U),U(U),U(U)),A,U(U))><L,U><S,U>,
+     Inline: [0] -}
+85afd99ba9b899087e879d0a1421558e
+  $wmakeScene ::
+    GHC.Types.Int
+    -> GHC.Types.Int
+    -> GHC.Types.Int
+    -> Vect3.Vect3
+    -> Vect3.Vect3
+    -> GHC.Types.Double
+    -> GHC.Types.Double
+    -> HitableList.HitableList
+    -> (# [Data.ByteString.Internal.ByteString], GHC.Types.Int,
+          GHC.Types.Int, GHC.Types.Int, Camera.Camera,
+          HitableList.HitableList #)
+  {- Arity: 8,
+     Strictness: <L,U(U)><L,U(U)><L,U><L,U(U(U),U(U),U(U))><L,U(U(U),U(U),U(U))><L,1*U(U)><L,1*U(U)><L,U>,
+     Inline: [0] -}
+8b89731ea9c809c24279a35b8b064d70
+  $wprintVect ::
+    GHC.Prim.Double#
+    -> GHC.Prim.Double#
+    -> GHC.Prim.Double#
+    -> Data.ByteString.Internal.ByteString
+  {- Arity: 3, Strictness: <S,U><S,U><S,U>, Inline: [0] -}
+8d338661ce9316f16f24b797afc28d9d
+  $wrenderScene ::
+    GHC.Types.Int
+    -> GHC.Prim.Int#
+    -> GHC.Types.Int
+    -> Camera.Camera
+    -> HitableList.HitableList
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, [Vect3.Vect3] #)
+  {- Arity: 6,
+     Strictness: <L,1*U(U)><S,U><L,U(U)><L,U(U(U(U),U(U),U(U)),U(U(U),U(U),U(U)),U(U(U),U(U),U(U)),U(U(U),U(U),U(U)),U(U(U),U(U),U(U)),U(U(U),U(U),U(U)),A,U(U))><L,U><S,U>,
+     Inline: [0] -}
+710b3eba099772dcc34bc74ba3662656
+  data Scene
+    = MkScene {header :: [Data.ByteString.Internal.ByteString],
+               nx :: GHC.Types.Int,
+               ny :: GHC.Types.Int,
+               ns :: GHC.Types.Int,
+               camera :: Camera.Camera,
+               world :: HitableList.HitableList}
+710b3eba099772dcc34bc74ba3662656
+  camera :: Scene.Scene -> Camera.Camera
+  RecSel Left Scene.Scene
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLLLSL),1*U(A,A,A,A,1*U(U,U,U,U,U,U,U,U),A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Scene.Scene) ->
+                 case ds of wild { Scene.MkScene ds1 ds2 ds3 ds4 ds5 ds6 ->
+                 ds5 }) -}
+7421566a4a9fd43cac96c3c7d8e64d48
+  color ::
+    Ray.Ray
+    -> HitableList.HitableList
+    -> GHC.Types.Int
+    -> System.Random.StdGen
+    -> Vect3.Vect3
+  {- Arity: 4,
+     Strictness: <S,1*U(U(U(U),U(U),U(U)),U(U(U),U(U),U(U)))><S,U><L,1*U(U)><L,U(U,U)>m,
+     Inline: [0],
+     Unfolding: InlineRule (4, True, False)
+                (\ (w :: Ray.Ray)
+                   (w1 :: HitableList.HitableList)
+                   (w2 :: GHC.Types.Int)
+                   (w3 :: System.Random.StdGen) ->
+                 case w of ww { Ray.MkRay ww1 ww2 ->
+                 case Scene.$wcolor ww1 ww2 w1 w2 w3 of ww3 { (#,,#) ww4 ww5 ww6 ->
+                 (ww4, ww5, ww6) } }) -}
+f65a285ebe8a1fdf3ed03c2d2ffc59b1
+  gSG ::
+    System.Random.StdGen -> GHC.Types.Int -> [System.Random.StdGen]
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,1*U(U,U)><S(S),1*U(1*U)>,
+     Inline: [0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: System.Random.StdGen) (w1 :: GHC.Types.Int) ->
+                 case w1 of ww { GHC.Types.I# ww1 -> Scene.$wgSG w ww1 }) -}
+b2308b70ea4454b7f3edaa0cb67a8bb4
+  getSamples ::
+    (GHC.Types.Int, GHC.Types.Int)
+    -> Control.Monad.Trans.Reader.ReaderT
+         Scene.Scene GHC.Types.IO Vect3.Vect3
+  {- Arity: 3,
+     Strictness: <S,1*U(U(U),U(U))><S,1*U(A,U(U),U(U),U(U),U(U(U(U),U(U),U(U)),U(U(U),U(U),U(U)),U(U(U),U(U),U(U)),U(U(U),U(U),U(U)),U(U(U),U(U),U(U)),U(U(U),U(U),U(U)),A,U(U)),U)><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Scene.getSamples1
+                  `cast`
+                (<(GHC.Types.Int, GHC.Types.Int)>_R
+                 ->_R (<Scene.Scene>_R
+                       ->_R Sym (GHC.Types.N:IO[0]
+                                     <Vect3.Vect3>_R)) ; Sym (Control.Monad.Trans.Reader.N:ReaderT[0]
+                                                                  <*>_N
+                                                                  <Scene.Scene>_R
+                                                                  <GHC.Types.IO>_R
+                                                                  <Vect3.Vect3>_N)) -}
+2344df7ee4b16d93ceba113f1f7c2c73
+  getSamples1 ::
+    (GHC.Types.Int, GHC.Types.Int)
+    -> Scene.Scene
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, Vect3.Vect3 #)
+  {- Arity: 3,
+     Strictness: <S,1*U(U(U),U(U))><S,1*U(A,U(U),U(U),U(U),U(U(U(U),U(U),U(U)),U(U(U),U(U),U(U)),U(U(U),U(U),U(U)),U(U(U),U(U),U(U)),U(U(U),U(U),U(U)),U(U(U),U(U),U(U)),A,U(U)),U)><S,U>,
+     Inline: [0],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: (GHC.Types.Int, GHC.Types.Int))
+                   (w1 :: Scene.Scene)
+                   (w2 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case w of ww { (,) ww1 ww2 ->
+                 case w1 of ww3 { Scene.MkScene ww4 ww5 ww6 ww7 ww8 ww9 ->
+                 Scene.$wgetSamples ww1 ww2 ww5 ww6 ww7 ww8 ww9 w2 } }) -}
+710b3eba099772dcc34bc74ba3662656
+  header :: Scene.Scene -> [Data.ByteString.Internal.ByteString]
+  RecSel Left Scene.Scene
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(SLLLLL),1*U(1*U,A,A,A,A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Scene.Scene) ->
+                 case ds of wild { Scene.MkScene ds1 ds2 ds3 ds4 ds5 ds6 ->
+                 ds1 }) -}
+67d94e717f0d2de9e1418d8a8bb7bcc3
+  makeScene ::
+    GHC.Types.Int
+    -> GHC.Types.Int
+    -> GHC.Types.Int
+    -> Vect3.Vect3
+    -> Vect3.Vect3
+    -> GHC.Types.Double
+    -> GHC.Types.Double
+    -> HitableList.HitableList
+    -> Scene.Scene
+  {- Arity: 8,
+     Strictness: <L,U(U)><L,U(U)><L,U><L,U(U(U),U(U),U(U))><L,U(U(U),U(U),U(U))><L,1*U(U)><L,1*U(U)><L,U>m,
+     Inline: [0],
+     Unfolding: InlineRule (8, True, False)
+                (\ (w :: GHC.Types.Int)
+                   (w1 :: GHC.Types.Int)
+                   (w2 :: GHC.Types.Int)
+                   (w3 :: Vect3.Vect3)
+                   (w4 :: Vect3.Vect3)
+                   (w5 :: GHC.Types.Double)
+                   (w6 :: GHC.Types.Double)
+                   (w7 :: HitableList.HitableList) ->
+                 case Scene.$wmakeScene
+                        w
+                        w1
+                        w2
+                        w3
+                        w4
+                        w5
+                        w6
+                        w7 of ww { (#,,,,,#) ww1 ww2 ww3 ww4 ww5 ww6 ->
+                 Scene.MkScene ww1 ww2 ww3 ww4 ww5 ww6 }) -}
+710b3eba099772dcc34bc74ba3662656
+  ns :: Scene.Scene -> GHC.Types.Int
+  RecSel Left Scene.Scene
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLLSLL),1*U(A,A,A,1*U(U),A,A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Scene.Scene) ->
+                 case ds of wild { Scene.MkScene ds1 ds2 ds3 ds4 ds5 ds6 ->
+                 ds4 }) -}
+710b3eba099772dcc34bc74ba3662656
+  nx :: Scene.Scene -> GHC.Types.Int
+  RecSel Left Scene.Scene
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LSLLLL),1*U(A,1*U(U),A,A,A,A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Scene.Scene) ->
+                 case ds of wild { Scene.MkScene ds1 ds2 ds3 ds4 ds5 ds6 ->
+                 ds2 }) -}
+710b3eba099772dcc34bc74ba3662656
+  ny :: Scene.Scene -> GHC.Types.Int
+  RecSel Left Scene.Scene
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLSLLL),1*U(A,A,1*U(U),A,A,A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Scene.Scene) ->
+                 case ds of wild { Scene.MkScene ds1 ds2 ds3 ds4 ds5 ds6 ->
+                 ds3 }) -}
+ae1ef9eec7d64b765980a39fbaca1f28
+  printHeader :: Scene.Scene -> Data.ByteString.Internal.ByteString
+  {- Arity: 1, Strictness: <S(SLLLLL),1*U(1*U,A,A,A,A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Scene.Scene) ->
+                 case ds of wild { Scene.MkScene header1 ds1 ds2 ds3 ds4 ds5 ->
+                 Data.ByteString.Char8.unlines header1 }) -}
+20598b6cd1727c5742fde3e4f39e3b48
+  printVect :: Vect3.Vect3 -> Data.ByteString.Internal.ByteString
+  {- Arity: 1,
+     Strictness: <S(S(S)S(S)S(S)),1*U(1*U(U),1*U(U),1*U(U))>,
+     Inline: [0],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: Vect3.Vect3) ->
+                 case w of ww { (,,) ww1 ww2 ww3 ->
+                 case ww1 of ww4 { GHC.Types.D# ww5 ->
+                 case ww2 of ww6 { GHC.Types.D# ww7 ->
+                 case ww3 of ww8 { GHC.Types.D# ww9 ->
+                 Scene.$wprintVect ww5 ww7 ww9 } } } }) -}
+ace98feaec1610b1260695af7f875412
+  renderCol ::
+    GHC.Types.Int
+    -> GHC.Types.Int
+    -> GHC.Types.Int
+    -> GHC.Types.Int
+    -> Camera.Camera
+    -> HitableList.HitableList
+    -> ((GHC.Types.Double, GHC.Types.Double), System.Random.StdGen)
+    -> Vect3.Vect3
+  {- Arity: 7,
+     Strictness: <L,1*U(U)><L,1*U(U)><L,1*U(U)><L,1*U(U)><S,1*U(1*U(1*U(U),1*U(U),1*U(U)),1*U(1*U(U),1*U(U),1*U(U)),1*U(1*U(U),1*U(U),1*U(U)),U(U(U),U(U),U(U)),1*U(1*U(U),1*U(U),1*U(U)),1*U(1*U(U),1*U(U),1*U(U)),A,U(U))><S,U><S(SL),1*U(1*U(1*U(U),1*U(U)),1*U(U,U))>m,
+     Unfolding: (\ (i :: GHC.Types.Int)
+                   (j :: GHC.Types.Int)
+                   (nx1 :: GHC.Types.Int)
+                   (ny1 :: GHC.Types.Int)
+                   (camera1 :: Camera.Camera)
+                   (world1 :: HitableList.HitableList)
+                   (ds :: ((GHC.Types.Double, GHC.Types.Double),
+                           System.Random.StdGen)) ->
+                 case ds of wild { (,) ds1 stdGen ->
+                 case ds1 of wild1 { (,) r1 r2 ->
+                 case camera1 of ww { Camera.MkCamera ww1 ww2 ww3 ww4 ww5 ww6 ww7 ww8 ->
+                 let {
+                   ds2 :: (System.Random.StdGen, System.Random.StdGen)
+                   = case stdGen of ww11 { System.Random.StdGen ww12 ww13 ->
+                     case System.Random.$wstdSplit
+                            ww12
+                            ww13 of ww14 { (#,#) ww15 ww16 ->
+                     (ww15, ww16) } }
+                 } in
+                 case Camera.$wgetRay
+                        ww1
+                        ww2
+                        ww3
+                        ww4
+                        ww5
+                        ww6
+                        ww8
+                        (case i of wild2 { GHC.Types.I# i1 ->
+                         case r1 of wild3 { GHC.Types.D# y ->
+                         case nx1 of wild4 { GHC.Types.I# i2 ->
+                         case GHC.Prim./##
+                                (GHC.Prim.+## (GHC.Prim.int2Double# i1) y)
+                                (GHC.Prim.int2Double# i2) of wild5 { DEFAULT ->
+                         GHC.Types.D# wild5 } } } })
+                        (case j of wild2 { GHC.Types.I# i1 ->
+                         case r2 of wild3 { GHC.Types.D# y ->
+                         case ny1 of wild4 { GHC.Types.I# i2 ->
+                         case GHC.Prim./##
+                                (GHC.Prim.+## (GHC.Prim.int2Double# i1) y)
+                                (GHC.Prim.int2Double# i2) of wild5 { DEFAULT ->
+                         GHC.Types.D# wild5 } } } })
+                        (case ds2 of wild2 { (,) s1 s2 -> s1 }) of ww9 { (#,#) ww10 ww11 ->
+                 case Scene.$wcolor
+                        ww10
+                        ww11
+                        world1
+                        Scene.renderCol1
+                        (case ds2 of wild2 { (,) s1 s2 ->
+                         s2 }) of ww16 { (#,,#) ww17 ww18 ww19 ->
+                 (ww17, ww18, ww19) } } } } }) -}
+379f21d121fbfc5bfad3b572ac2ff0f1
+  renderCol1 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 0#) -}
+71ffa9f7aa6ed8250b4d8e4f53ebcb40
+  renderScene ::
+    Control.Monad.Trans.Reader.ReaderT
+      Scene.Scene GHC.Types.IO [Vect3.Vect3]
+  {- Arity: 2,
+     Strictness: <S(LLS(S)LLL),1*U(A,1*U(U),1*U(U),U(U),U(U(U(U),U(U),U(U)),U(U(U),U(U),U(U)),U(U(U),U(U),U(U)),U(U(U),U(U),U(U)),U(U(U),U(U),U(U)),U(U(U),U(U),U(U)),A,U(U)),U)><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Scene.renderScene1
+                  `cast`
+                ((<Scene.Scene>_R
+                  ->_R Sym (GHC.Types.N:IO[0]
+                                <[Vect3.Vect3]>_R)) ; Sym (Control.Monad.Trans.Reader.N:ReaderT[0]
+                                                               <*>_N
+                                                               <Scene.Scene>_R
+                                                               <GHC.Types.IO>_R
+                                                               <[Vect3.Vect3]>_N)) -}
+2a454ac82a935f59406f74de5d8672c1
+  renderScene1 ::
+    Scene.Scene
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, [Vect3.Vect3] #)
+  {- Arity: 2,
+     Strictness: <S(LLS(S)LLL),1*U(A,1*U(U),1*U(U),U(U),U(U(U(U),U(U),U(U)),U(U(U),U(U),U(U)),U(U(U),U(U),U(U)),U(U(U),U(U),U(U)),U(U(U),U(U),U(U)),U(U(U),U(U),U(U)),A,U(U)),U)><S,U>,
+     Inline: [0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Scene.Scene) (w1 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case w of ww { Scene.MkScene ww1 ww2 ww3 ww4 ww5 ww6 ->
+                 case ww3 of ww7 { GHC.Types.I# ww8 ->
+                 Scene.$wrenderScene ww2 ww8 ww4 ww5 ww6 w1 } }) -}
+710b3eba099772dcc34bc74ba3662656
+  world :: Scene.Scene -> HitableList.HitableList
+  RecSel Left Scene.Scene
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLLLLS),1*U(A,A,A,A,A,1*U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Scene.Scene) ->
+                 case ds of wild { Scene.MkScene ds1 ds2 ds3 ds4 ds5 ds6 ->
+                 ds6 }) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+
