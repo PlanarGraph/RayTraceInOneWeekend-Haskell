@@ -1,7 +1,6 @@
 {-# LANGUAGE ExistentialQuantification #-}
 {-# LANGUAGE GADTSyntax                #-}
 {-# LANGUAGE ScopedTypeVariables       #-}
-
 module HitableList where
 
 import           Hitable
@@ -10,9 +9,9 @@ import           Vect3
 import           Control.Monad
 import           Data.Maybe
 import           System.Random
+import           Data.Aeson
 
 type HitableList = [Hitable]
-
 
 genLambertian :: IO Material
 genLambertian = do
@@ -60,6 +59,9 @@ randomWorld =
   in  do
         wld <- forM [ (a, b) | a <- [(-4) .. 3], b <- [(-4) .. 3] ] genSphere
         return $ begin <> catMaybes wld <> end
+
+readWorld :: FilePath -> IO (Maybe HitableList)
+readWorld = decodeFileStrict
 
 hitL :: HitableList -> Ray -> Double -> Double -> Maybe HitRecord
 hitL list r tMin tMax = fst $ foldl findClosest (Nothing, tMax) list

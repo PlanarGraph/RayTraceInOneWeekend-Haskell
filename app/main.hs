@@ -7,11 +7,21 @@ import           Scene
 import           Vect3
 import           HitableList
 import qualified Data.ByteString.Char8         as BC
+import           System.Environment
+
+loadWorld :: [String] -> IO HitableList
+loadWorld [] = randomWorld
+loadWorld (x:_) = do
+  w <- readWorld x
+  case w of
+       Just wld -> return wld
+       Nothing -> randomWorld
 
 main :: IO ()
 main = do
-  wld <- randomWorld
-  let scene = makeScene 400 200 100 (13, 2, 3) (0, 0, 0) 20 0.1 wld
+  args <- getArgs 
+  wld <- loadWorld args
+  let scene = makeScene 200 100 100 (13, 2, 3) (0, 0, 0) 20 0.1 wld
   pics <- runReaderT renderScene scene
   let pic = map printVect pics
   BC.writeFile "out.ppm" (BC.unlines $ header scene <> pic)

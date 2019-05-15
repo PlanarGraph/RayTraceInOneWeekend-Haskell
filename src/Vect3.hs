@@ -1,5 +1,4 @@
 {-# LANGUAGE FlexibleInstances #-}
-
 module Vect3 where
 
 type Vect3 = (Double, Double, Double)

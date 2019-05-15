@@ -1,10 +1,17 @@
 {-# LANGUAGE ScopedTypeVariables #-}
+{-# LANGUAGE OverloadedStrings #-}
 module Hitable where
 
 import           Ray
 import           System.Random
 import           Vect3
 import           Control.Monad.IO.Class
+import           GHC.Generics
+import           Data.Aeson
+import           Control.Applicative
+--import qualified Data.Text as T
+--import           Data.Text (Text)
+--import           Data.ByteString.Lazy (ByteString)
 
 data HitRecord = MkHR {
     t      :: Double,
@@ -17,9 +24,26 @@ data Material =
     Lambertian Vect3
   | Metal Vect3 Double
   | Dielectric Double
+ deriving Show
+
+instance FromJSON Material where
+  parseJSON (Object v) =
+        (Lambertian <$> v .: "Lambertian")
+    <|> (Metal <$> v .: "Metal-Albedo"
+               <*> v .: "Metal-Fuzz")
+    <|> (Dielectric <$> v .: "Dielectric")
+  parseJSON _ =
+    fail "Expected an object for Material"
 
 data Hitable =
     Sphere Vect3 Double Material
+    deriving Show
+
+instance FromJSON Hitable where
+  parseJSON (Object v) =
+    (Sphere <$> v .: "Center"
+            <*> v .: "Radius"
+            <*> v .: "Material")
 
 discriminant :: Hitable -> Ray -> Vect3
 discriminant (Sphere center radius _) (MkRay origin direction) =
