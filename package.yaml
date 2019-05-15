@@ -1,5 +1,5 @@
 name:                raytrace
-version:             0.2.1
+version:             0.3.0
 github:              "PlanarGraph/RayTraceInOneWeekend-Haskell"
 license:             BSD3
 author:              "Nolan Tiffney"
@@ -8,7 +8,7 @@ copyright:           "2019 Nolan Tiffney"
 
 extra-source-files:
 - README.md
-- ChangeLog.md
+  #ChangeLog.md
 
 # Metadata used when publishing your package
 # synopsis:            Short description of your package

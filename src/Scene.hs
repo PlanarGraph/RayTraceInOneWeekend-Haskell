@@ -87,14 +87,9 @@ renderCol i j nx ny camera world ((r1, r2), stdGen) =
       r        = getRay camera u v s1
   in  color r world 0 s2
 
-gSG :: StdGen -> Int -> [StdGen]
-gSG _  0 = []
-gSG sg n = let (s1, s2) = split sg in s1 : gSG s2 (n - 1)
-
-getSamples :: (Int, Int) -> ReaderT Scene IO Vect3
-getSamples (j, i) = do
+getSamples :: (Int, Int, StdGen) -> Reader Scene Vect3
+getSamples (j, i, stdgen) = do
   (MkScene header nx ny ns camera world) <- ask
-  stdgen <- liftIO newStdGen
   let rands = take ns $ makeTups $ randomRs (0.0, 0.9999999999999999) stdgen
       ng    = snd $ split stdgen
       gens  = map mkStdGen $ take ns $ randomRs (0, maxBound :: Int) ng
@@ -108,7 +103,8 @@ getSamples (j, i) = do
 renderScene :: ReaderT Scene IO [Vect3]
 renderScene = do
   scene@(MkScene _ nx ny _ _ _) <- ask
-  let genCols x = runReaderT (getSamples x) scene
-  liftIO $ forM
-    [ (j, i) | j <- [(ny - 1), (ny - 2) .. 0], i <- [0 .. (nx - 1)] ]
-    genCols
+  stdgen <- liftIO newStdGen
+  let genCols x = runReader (getSamples x) scene
+      zp (a,b) c = (a,b,c) 
+      sgs = mkStdGen <$> randomRs (0, maxBound :: Int) stdgen
+  return $ parMap rdeepseq genCols (zipWith zp [ (j, i) | j <- [(ny - 1), (ny - 2) .. 0], i <- [0 .. (nx - 1)] ] sgs)
