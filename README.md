@@ -3,3 +3,4 @@ Coding along with [Ray Tracing in One Weekend](http://in1weekend.blogspot.com/20
 
 Additional features added:
   - Basic parallelism of the point sampling for anti-aliasing
+  - JSON parsing for prebuilt world configurations
