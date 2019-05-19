@@ -8,7 +8,7 @@ bug-reports:    https://github.com/PlanarGraph/RayTraceInOneWeekend-Haskell/issu
 author:         Nolan Tiffney
 maintainer:     nolantiffney@gmail.com
 copyright:      2019 Nolan Tiffney
-license:        BSD3
+license:        MIT
 license-file:   LICENSE
 build-type:     Simple
 extra-source-files:
